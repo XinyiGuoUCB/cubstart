@@ -18,12 +18,12 @@ struct Article: Codable, Identifiable {
     var author: String?
     var url: String?
     var source, title: String?
-    var articleDescription: String?
+    var welcomeDescription: String?
     var image: String?
     var date: Date?
 
     enum CodingKeys: String, CodingKey {
         case author, url, source, title, image, date
-        case articleDescription = "description"
+        case welcomeDescription = "description"
     }
 }

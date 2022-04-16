@@ -16,7 +16,7 @@ struct ArticleServiceImpl: ArticleService {
     func request(from endpoint: ArticleAPI) -> AnyPublisher<ArticleResponse, APIError> {
         
         let jsonDecoder = JSONDecoder()
-        jsonDecoder.dataDecodingStrategy = .iso8601
+        jsonDecoder.dateDecodingStrategy = .iso8601
         
         return URLSession.shared
             .dataTaskPublisher(for: endpoint.urlRequest)

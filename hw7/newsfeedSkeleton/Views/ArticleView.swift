@@ -57,10 +57,3 @@ struct ArticleView: View {
         }
     }
 }
-
-struct ArticleView_Previews: PreviewProvider {
-    static var previews: some View {
-        ArticleView(article: Article.dummyData)
-            .previewLayout(.sizeThatFits)
-    }
-}
